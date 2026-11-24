@@ -3,9 +3,9 @@
 use Bale\Frasasti\Models\Aduan;
 use Bale\Frasasti\Models\AduanCategory;
 use Bale\Frasasti\Services\AduanService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\RefreshTestDatabaseSafely;
 
-uses(RefreshDatabase::class);
+uses(RefreshTestDatabaseSafely::class);
 
 beforeEach(function () {
     $this->service = app(AduanService::class);

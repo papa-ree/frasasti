@@ -2,14 +2,14 @@
 
 use Bale\Frasasti\Models\Aduan;
 use Bale\Frasasti\Models\AduanCategory;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\RefreshTestDatabaseSafely;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Permission;
 
-uses(RefreshDatabase::class);
+uses(RefreshTestDatabaseSafely::class);
 
 /**
  * Tabel legacy `rakaca_aduans` masih ada di database aplikasi (dibiarkan

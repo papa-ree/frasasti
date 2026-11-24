@@ -5,12 +5,12 @@ use Bale\Frasasti\FrasastiServiceProvider;
 use Bale\Frasasti\Livewire\Pages\Landlord\AduanMasuk\Form as AduanMasukForm;
 use Bale\Frasasti\Livewire\Pages\Landlord\AduanMasuk\Index as AduanMasukIndex;
 use Bale\Frasasti\Models\Aduan;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\RefreshTestDatabaseSafely;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-uses(RefreshDatabase::class);
+uses(RefreshTestDatabaseSafely::class);
 
 beforeEach(function () {
     $this->app->register(FrasastiServiceProvider::class);

@@ -4,12 +4,12 @@ use Bale\Frasasti\FrasastiServiceProvider;
 use Bale\Frasasti\Livewire\Pages\Guest\Aduan\Index;
 use Bale\Frasasti\Models\Aduan;
 use Bale\Frasasti\Models\AduanCategory;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\RefreshTestDatabaseSafely;
 use Illuminate\Support\Facades\Crypt;
 use Livewire\Livewire;
 use Lunaweb\RecaptchaV3\Facades\RecaptchaV3;
 
-uses(RefreshDatabase::class);
+uses(RefreshTestDatabaseSafely::class);
 
 beforeEach(function () {
     $this->app->register(FrasastiServiceProvider::class);

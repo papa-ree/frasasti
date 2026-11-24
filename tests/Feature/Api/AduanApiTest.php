@@ -3,9 +3,9 @@
 use Bale\Api\Services\TokenManager;
 use Bale\Frasasti\Models\Aduan;
 use Bale\Frasasti\Models\AduanCategory;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\RefreshTestDatabaseSafely;
 
-uses(RefreshDatabase::class);
+uses(RefreshTestDatabaseSafely::class);
 
 beforeEach(function () {
     $this->tokens = app(TokenManager::class);
